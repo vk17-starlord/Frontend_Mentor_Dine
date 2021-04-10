@@ -309,9 +309,21 @@
     width: 95%;
     margin: 0 auto;
   }
-  .features .colm, .highlights .h_col, .events .e-col {
+  .features .colm, .highlights .h_col, .events .e-col, footer .f_col {
     padding: 20px 0;
     min-height: auto !important;
+  }
+  .reservation .container {
+    padding: 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 90%;
+  }
+  .reservation .container a {
+    margin: 0 auto;
+  }
+  .reservation .container h1 {
+    width: 100% !important;
   }
   .events .e-col {
     width: 85%;
@@ -368,4 +380,83 @@
   to {
     opacity: 1;
   }
+}
+
+.reservation {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  color: white;
+  min-height: 30vh;
+  background-size: cover;
+  background-image: url("./images/homepage/ready-bg-desktop.jpg");
+}
+
+.reservation .dark::before {
+  width: 100%;
+  height: 30vh;
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.reservation .container {
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  min-height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reservation .container button {
+  background-color: transparent !important;
+  color: white;
+  position: relative;
+  z-index: 4;
+  padding: 20px 35px;
+  border: 1px solid white;
+}
+
+.reservation .container button:hover {
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  background-color: white;
+}
+
+footer {
+  width: 100%;
+  background-color: #111111;
+}
+
+footer .f_col {
+  min-height: 40vh;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .f_col h4 {
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  color: white;
+  margin: 10px 0;
 }

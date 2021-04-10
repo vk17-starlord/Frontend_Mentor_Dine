@@ -56,18 +56,33 @@ document.getElementById('pic').innerHTML=img;
 
 }
 
+
+
+
+setInterval(() => {
+if(index<Events.length){
+console.log(index)
 changeImg(index)
+toggle(`event${index+1}`)
+    index++
+}else{
+   
+    index=0;
+
+
+}
+}, 2000);
 
 let list='';
 
 Events.forEach((event,index) => {
 
     list += `
-    <li id="event${index+1}" onclick="toggle('event${index+1}')"  data-index="${index}"  >${event.name}</li> 
+    <li id="event${index+1}" onclick="toggle('event${index+1}')"  data-index="${index}"  >${event.name}</li>
 
     `
 
- 
+
 })
 
 
@@ -75,15 +90,15 @@ function toggle(id){
     for (let i = 0; i < ul.children.length; i++) {
         const element = ul.children[i];
         element.classList.remove('active')
-        
+
     }
     var ele=document.getElementById(id)
     ele.classList.toggle('active')
 
-    
+
     let index=ele.dataset.index;
     changeImg(index)
-    
+
 }
 
 ul.innerHTML=list;
