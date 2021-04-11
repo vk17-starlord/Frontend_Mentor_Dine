@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" href="./booking.css">
+     <link rel="shortcut icon" type="image/jpg" href="./images/favicon-32x32.png"/>
+    <title>Frontend Mentor | Dine</title>
+  </head>
+  <body>
+
+    <div class="b-hero">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-lg-6">
+            <img src="./images/logo.svg" id="logo" alt="">
+
+            <div class="txt">
+                <h1>Reservations</h1>
+                <p>We can’t wait to host you. If you have any special requirements please feel free to call on the phone number below. We’ll be happy to accommodate you.</p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 d-flex justify-content-center align-items-end">
+            <form class="form d-flex justify-content-start align-items-center flex-column">
+<input type="text" placeholder="Name" >
+<input type="email" placeholder="Email" >
+<div class="date-container row">
+<div class="col-sm-12 col-lg-4">
+    <h1>Pick a Date</h1>
+</div>
+<div class="col-sm-12 col-lg-8 row">
+  <div class="col-sm-4">
+    <input type="text" placeholder="MM">
+  </div>
+  <div class="col-sm-4">
+    <input type="text" placeholder="DD">
+  </div>
+  <div class="col-sm-4">
+    <input type="text" placeholder="YY">
+  </div>
+</div>
+
+</div>
+      
+<div class="date-container row">
+    <div class="col-sm-12 col-lg-4">
+        <h1>Pick a Time</h1>
+    </div>
+    <div class="col-sm-12 col-lg-8 row">
+      <div class="col-sm-4">
+        <input type="text" placeholder="11">
+      </div>
+      <div class="col-sm-4">
+        <input type="text" placeholder="11">
+      </div>
+      <div class="col-sm-4">
+     
+        <div class="dropdown" onclick="dropdown()">
+            <span id="value">AM</span><i class='bx bx-chevron-down' id="icon"></i>
+        </div>
+        <div class="list" id="time-list">
+            <li onclick="select('AM')">  AM</li >
+            <li onclick="select('PM')">  PM</li >
+        </div>
+      </div>
+    </div>
+    
+    </div>
+          <div class="people-container">
+<button  onclick="decrease()" type="button" id="minus"><i class='bx bx-minus' ></i></button>
+<p ><span id="number"></span>people</p>
+<button  onclick="increase()" type="button" id="minus"><i class='bx bx-plus' ></i></button>
+
+          </div>
+          <input type="button" value="make reservation" class="submit">
+
+            </form>
+        </div>
+
+    </div>
+</div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-4 f_col">
+                    <img src="./images/logo.svg" alt="">
+                </div>
+                <div class="col-sm-12 col-lg-4 f_col">
+                    <h4>Marthwaite, Sedbergh
+                        </h4>
+                        <h4>
+                            Cumbria
+                        </h4>
+    <h4>                    +00 44 123 4567
+    </h4>
+                    </div>
+    
+                <div class="col-sm-12 col-lg-4 f_col">
+                    
+                        <h4>                    Open Times
+                        </h4>
+                        <h4>
+                            Mon - Fri: 09:00 AM - 10:00 PM
+                        </h4>
+                        <h4>
+                            Sat - Sun: 09:00 AM - 11:30 PM
+                        </h4>
+    
+                    
+                </div>
+    
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <script>
+
+
+let inital=4;
+
+function increase(){
+    inital=inital+1;
+    console.log('inital',inital)
+    setInital(inital)
+
+}
+
+function decrease(){
+    inital=inital-1;
+    setInital(inital)
+    console.log('inital',inital)
+}
+
+function setInital(num){
+if(inital>-1){
+    document.getElementById('number').innerHTML=num;
+}else{
+    inital=0;
+}
+
+}
+
+setInital(inital)
+
+   function select(val){
+    let value=document.getElementById('value');
+    value.innerText=val;
+
+
+   }     
+function dropdown(){
+    var list=document.getElementById('time-list')
+    list.animate([
+        // keyframes
+        { opacity: '0' },
+        { opacity: '0.5' },
+        { opacity: '1' },
+        ], {
+        // timing options
+        duration: 500,
+        iterations: 1
+      });
+
+
+    var icon=document.getElementById('icon')
+   if(list.style.display==="none"){
+    list.style.display="flex"
+    icon.classList.replace('bx-chevron-down','bx-chevron-up');
+    
+   }else{
+    list.style.display="none"
+    icon.classList.replace('bx-chevron-up','bx-chevron-down');
+
+   }
+}
+
+    </script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
+</body>
+</html>

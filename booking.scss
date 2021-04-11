@@ -1,0 +1,187 @@
+@import './style.scss';
+
+
+.b-hero{
+    margin-bottom: 40vh;
+    width: 100%;
+    min-height: 80vh;
+    background-size: cover;
+    background-image: url('./images/booking/hero-bg-desktop.jpg ');
+
+.txt{
+    width: 100%;
+    margin: 20vh 0;
+    color: white;
+    h1{
+        font-size: 3.2rem;
+        line-height: 110%;
+        
+    }
+    p{
+        font-size: 18px;
+        line-height: 150%;
+    }
+}
+
+}
+
+.form{
+    width: 100%;
+    background-color: white;
+    padding: 25px;
+
+    min-height: 70vh;
+    position: relative;
+    margin-bottom: -30vh;
+    box-shadow:
+    0 6.6px 1.9px rgba(0, 0, 0, 0.025),
+    0 15.8px 4.6px rgba(0, 0, 0, 0.036),
+    0 29.7px 8.6px rgba(0, 0, 0, 0.045),
+    0 52.9px 15.4px rgba(0, 0, 0, 0.054),
+    0 99px 28.8px rgba(0, 0, 0, 0.065),
+    0 237px 69px rgba(0, 0, 0, 0.09)
+  ;
+
+  .dropdown{
+    text-align: center;
+      padding-bottom: 12px;
+      span{
+          i{
+padding: 5px;
+          }
+         
+      }
+cursor: pointer !important;
+      &:hover{
+          border-bottom: 1px solid #111111;
+      }
+      border-bottom: 1px solid #11111171;
+
+      
+  }
+
+  .list{
+      li{
+          list-style: none;
+          margin: 5px 0;
+      }
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 10px 0;
+     display: none;
+     position: absolute;
+     background-color: white;
+     z-index: 2;
+   span{
+   
+   }    
+      width: 100%;
+      box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  0 12.5px 10px rgba(0, 0, 0, 0.035),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  0 100px 80px rgba(0, 0, 0, 0.07)
+;
+  }
+  .date-container{
+      width: 100%;
+      
+      
+      padding: 20px 0;
+   
+
+      h1{
+          padding: 10px 0;
+          margin: 0;
+          font-size: 18px;
+      }
+      input{
+        text-align: center !important;
+
+          &::placeholder{
+          }
+        margin: 0px !important;
+        padding: 5px !important;
+      }
+  }
+
+  .people-container{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button{
+          border: none;
+          box-shadow: none;
+          &:focus{
+              outline: none !important;
+            
+          }
+          transition:all 1s ease-in-out ;
+
+          background-color: transparent;
+      }
+      p{
+          font-size: 18px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: bold;
+          span{
+              padding: 0 5px;
+          }
+      }
+      margin-bottom: 20px;
+      padding: 10px ;
+      border-bottom: 1px solid #11111171;
+  }
+  .submit{
+      &:hover{
+          background-color: white;
+          color: #111111;
+          transition: 1s ease;
+          border: 1px solid #111111;
+      }
+      width: 100%;
+      padding: 20px;
+      background-color: #111111;
+      text-align: center;
+      font-weight: semi-bold;
+      font-size: 14px;
+      color: white;
+      text-transform: uppercase;
+  }
+ input{
+     width: 100%;
+     margin: 20px auto;
+     padding: 20px;
+     border: none;
+     border-bottom: 1px solid #11111171;
+font-weight: lighter;
+font-size: 18px;
+
+     &::placeholder{
+        
+         opacity: 0.5;
+         text-transform: capitalize;
+     }
+     &:focus-visible{
+         border-bottom: 1px solid #111111;
+         outline: none !important;
+         &::placeholder{
+            opacity: 1 !important;
+            color: #111111;
+         }
+     }
+ }
+}
+
+#logo{
+    
+    margin: 5vh 0;
+}
