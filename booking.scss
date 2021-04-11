@@ -185,3 +185,35 @@ font-size: 18px;
     
     margin: 5vh 0;
 }
+
+
+@media screen and (max-width:718px){
+    .b-hero .txt h1{
+        font-size: 30px !important
+        ;
+    }
+.container{
+    padding: 0 !important;
+}
+   .form{
+       padding: 25px 20px;
+       .row{
+           padding-left: 0 !important;
+           padding-right: 0 !important;
+       }
+    .col-sm-12{
+        padding:auto 0 !important;
+    }     
+
+   }
+    .form .date-container{
+        .row{
+            flex-wrap: nowrap;
+            >div{
+                width: 32%;
+            }
+            display: flex;
+        }
+    }
+
+}
